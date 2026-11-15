@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffe7f0" />
+    <meta name="description" content="Hadiah kecil berisi ucapan, kenangan, dan banyak cinta." />
+    <title>Untuk Hari Spesialmu</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      window.reportIntroError = function (message) {
+        var panel = document.getElementById("introError");
+        if (panel) {
+          panel.textContent = message;
+          panel.hidden = false;
+        } else {
+          window.__introError = message;
+        }
+      };
+      window.addEventListener("error", function (event) {
+        window.reportIntroError("JavaScript error: " + event.message + "\n" + event.filename + ":" + event.lineno);
+      });
+      window.addEventListener("unhandledrejection", function (event) {
+        window.reportIntroError("Promise error: " + String(event.reason));
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.__introError) window.reportIntroError(window.__introError);
+      });
+    </script>
+    <script src="assets/phrases.js" defer></script>
+    <script src="assets/i-love-you.js" defer></script>
+    <script src="assets/rose.js" defer></script>
+    <script src="assets/birthday-cake.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <audio id="backgroundMusic" autoplay loop preload="auto">
+      <source src="assets/lagu.mp3" type="audio/mpeg" />
+    </audio>
+    <a class="skip-link" href="#cerita" tabindex="-1">Lewati ke hadiah</a>
+    <!-- Personal-project adaptations of JIN2's I LOVE YOU, IN BLOOM, and BIRTHDAY-CAKE source code. -->
+    <div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="Karya ASCII JIN2">
+      <pre class="intro-error" id="introError" hidden></pre>
+      <section class="original-art-scene" id="loveScene">
+        <div class="love-canvas-wrap">
+          <canvas id="loveCanvas" width="1080" height="960" role="img" aria-label="Hati yang dibentuk oleh ucapan aku cinta kamu dalam 114 bahasa."></canvas>
+        </div>
+      </section>
+      <section class="rose-art-scene" id="roseScene" hidden>
+        <div class="rose-canvas-wrap">
+          <canvas id="roseCanvas" width="1080" height="960" role="img" aria-label="Animasi ASCII IN BLOOM: batang dan kuncup mawar tumbuh, lalu kelopak merah muda mekar. Karya JIN2."></canvas>
+        </div>
+      </section>
+      <section class="birthday-art-scene" id="birthdayScene" hidden>
+        <div class="birthday-canvas-wrap">
+          <canvas id="birthdayCanvas" width="1080" height="960" role="img" aria-label="Kue ulang tahun ASCII terbentuk, lilin menyala, confetti jatuh, dan tulisan Happy Birthday muncul."></canvas>
+        </div>
+        <button class="continue-button" id="continueButton" type="button">Ketuk untuk lanjutkan</button>
+      </section>
+    </div>
+    <header class="site-header">
+      <a class="brand" href="#atas" aria-label="Kembali ke atas">little / things</a>
+      <nav aria-label="Navigasi halaman"><a href="#ucapan">Ucapan</a><a href="#kenangan">Kenangan</a><a href="#video">Video</a></nav>
+      <div class="header-actions">
+        <span class="header-date">dibuat khusus untukmu / 01</span>
+        <button class="music-toggle" id="musicToggle" type="button" aria-label="Putar musik" aria-pressed="false" hidden>♫</button>
+      </div>
+    </header>
+
+    <main id="atas">
+      <section class="hero" id="cerita">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-star">*</span> hari ini tentang kamu</p>
+          <h1>Untuk hari<br />yang <em>seindah</em><br />dirimu.</h1>
+          <p class="hero-description">Sebuah kejutan kecil berisi hal-hal besar yang ingin kusampaikan. Dibuat dengan banyak sayang, khusus untukmu.</p>
+          <a class="round-link" href="#ucapan"><span>Mulai baca</span><b aria-hidden="true">v</b></a>
+        </div>
+        <div class="hero-art" aria-label="Ilustrasi kartu ucapan dan bunga">
+          <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+          <div class="hero-sticker sticker-left">FOR<br />YOU</div>
+          <div class="hero-flower flower-one" aria-hidden="true">***</div><div class="hero-flower flower-two" aria-hidden="true">***</div>
+          <div class="hero-card">
+            <span class="card-date">a little birthday note</span><div class="card-heart" aria-hidden="true">LOVE</div>
+            <p class="card-preview-title">Happy birthday,<br /><em>my lovely nafaaa.</em></p>
+            <span class="card-preview">May you always be surrounded by happiness, sehat selalu, and may you always be my best partner in everything.</span>
+            <span class="card-signoff">with love, always</span>
+          </div>
+          <span class="hero-sparkle sparkle-left" aria-hidden="true">*</span><span class="hero-sparkle sparkle-right" aria-hidden="true">+</span>
+          <span class="hero-note">untuk seseorang<br />yang istimewa <span>/</span></span>
+        </div>
+        <div class="hero-bottom"><span>01 / 03</span><span>gulir perlahan</span><span>*</span></div>
+      </section>
+
+      <section class="wish-section section-pad" id="ucapan">
+        <div class="section-heading"><p class="eyebrow"><span class="eyebrow-star">01</span> surat kecil dariku</p><span class="heading-aside">dibaca kapan saja<br />saat kamu butuh senyum</span></div>
+        <div class="wish-layout">
+          <div class="wish-intro"><p class="wish-label">untuk my lovely,</p><h2>Selamat ulang<br />tahun, <em>kamu.</em></h2><div class="wish-flower" aria-hidden="true">***</div></div>
+          <article class="letter-card">
+            <span class="letter-mark" aria-hidden="true">"</span>
+            <p>Happy birthday, my lovely nafaaa. May you always be surrounded by happiness, sehat selalu, and may you always be my best partner in everything.. sekekalnya.</p>
+            <p>I hope all your dreams come true and all your hard work pays off. Aku bakal selalu doain yang terbaik buat kamu, dikasih kemudahan buat segala urusanmu, and I hope we always cherish what we have right now.</p>
+            <p>May we grow together, makin sukses ke depannya. Thank you for being such an amazing person. You’ve been working so hard, and I just want to say how proud I am of you. It's a huge achievement to be where you are right now.</p>
+            <p>Ke depannya, aku juga harap kamu juga makin tangguh dan berani ya. Dunia ini luas dan kamu bakal terus ketemu banyak orang, nggak cuma aku aja. Jadi, pelan-pelan kurangin rasa malunya, makin percaya diri, dan terus semangat yuppp.</p>
+            <p>No matter what happens, I'll be here. You can always share your happy and sad days with me, I'll always try to be your safe space. I hope you always remain the Nafaaaa I fell for since 2024.</p>
+            <p>Aku akan selalu berusaha untuk jadi yang terbaik buat kamu.</p>
+            <p class="letter-sign">Selamat ulang tahun my lovely nafaaa</p>
+          </article>
+        </div>
+        <div class="wish-footer"><span>harapanku untukmu</span><p>Semoga dunia selalu selembut senyummu.</p><span class="wish-footer-star" aria-hidden="true">*</span></div>
+      </section>
+
+      <section class="memories-section section-pad" id="kenangan">
+        <div class="section-heading"><p class="eyebrow"><span class="eyebrow-star">02</span> potongan waktu</p><span class="heading-aside">enam momen kecil<br />yang ingin kusimpan</span></div>
+        <div class="memories-intro"><h2>Hal-hal kecil,<br /><em>kenangan besar.</em></h2><p>Setiap foto punya ceritanya sendiri.<br />Ini beberapa yang paling kusuka.</p></div>
+        <div class="photo-grid" id="photoGrid" aria-label="Galeri enam foto kenangan">
+          <figure class="polaroid polaroid-one" data-photo="0"><div class="photo-window"><span class="photo-placeholder">01 <i>*</i></span></div><figcaption><span>hari yang sederhana</span><small>momen favorit</small></figcaption></figure>
+          <figure class="polaroid polaroid-two" data-photo="1"><div class="photo-window"><span class="photo-placeholder">02 <i>***</i></span></div><figcaption><span>senyum kesukaanku</span><small>selalu ingin kuulang</small></figcaption></figure>
+          <figure class="polaroid polaroid-three" data-photo="2"><div class="photo-window"><span class="photo-placeholder">03 <i>*</i></span></div><figcaption><span>kita dan cerita</span><small>bab yang kusayang</small></figcaption></figure>
+          <figure class="polaroid polaroid-four" data-photo="3"><div class="photo-window"><span class="photo-placeholder">04 <i>***</i></span></div><figcaption><span>senja yang hangat</span><small>rasanya seperti rumah</small></figcaption></figure>
+          <figure class="polaroid polaroid-five" data-photo="4"><div class="photo-window"><span class="photo-placeholder">05 <i>*</i></span></div><figcaption><span>tawa tanpa alasan</span><small>yang paling tulus</small></figcaption></figure>
+          <figure class="polaroid polaroid-six" data-photo="5"><div class="photo-window"><span class="photo-placeholder">06 <i>***</i></span></div><figcaption><span>masih banyak nanti</span><small>bersambung, ya</small></figcaption></figure>
+        </div>
+        <p class="gallery-note"><span>*</span> masih ada banyak cerita indah di depan kita</p>
+        <div class="memories-more">
+          <div class="memories-more-heading"><p class="eyebrow"><span class="eyebrow-star">+</span> dan masih banyak lagi</p><p>potongan cerita yang ingin kusimpan</p></div>
+          <div class="photo-grid" aria-label="Galeri tambahan delapan foto kenangan">
+            <figure class="polaroid polaroid-one" data-photo="6"><div class="photo-window"><span class="photo-placeholder">07 <i>*</i></span></div><figcaption><span>hari untuk dikenang</span><small>tersimpan baik</small></figcaption></figure>
+            <figure class="polaroid polaroid-two" data-photo="7"><div class="photo-window"><span class="photo-placeholder">08 <i>***</i></span></div><figcaption><span>senyum yang sama</span><small>tak pernah bosan</small></figcaption></figure>
+            <figure class="polaroid polaroid-three" data-photo="8"><div class="photo-window"><span class="photo-placeholder">09 <i>*</i></span></div><figcaption><span>cerita kita</span><small>selalu punya ruang</small></figcaption></figure>
+            <figure class="polaroid polaroid-four" data-photo="9"><div class="photo-window"><span class="photo-placeholder">10 <i>***</i></span></div><figcaption><span>hangatnya sederhana</span><small>cukup bersama</small></figcaption></figure>
+            <figure class="polaroid polaroid-five" data-photo="10"><div class="photo-window"><span class="photo-placeholder">11 <i>*</i></span></div><figcaption><span>tawa hari itu</span><small>ingin kuulang lagi</small></figcaption></figure>
+            <figure class="polaroid polaroid-six" data-photo="11"><div class="photo-window"><span class="photo-placeholder">12 <i>***</i></span></div><figcaption><span>momen kecil kita</span><small>berarti banyak</small></figcaption></figure>
+            <figure class="polaroid polaroid-one" data-photo="12"><div class="photo-window"><span class="photo-placeholder">13 <i>*</i></span></div><figcaption><span>bersamamu</span><small>tempat ternyaman</small></figcaption></figure>
+            <figure class="polaroid polaroid-two" data-photo="13"><div class="photo-window"><span class="photo-placeholder">14 <i>***</i></span></div><figcaption><span>lanjut nanti, ya</span><small>cerita kita berlanjut</small></figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section section-pad" id="video">
+        <div class="section-heading"><p class="eyebrow"><span class="eyebrow-star">03</span> pesan spesial</p><span class="heading-aside">tekan play<br />kalau sudah siap</span></div>
+        <div class="video-layout">
+          <div class="video-copy"><p class="eyebrow video-eyebrow">ada satu hal lagi...</p><h2>Kebersamaan kita<br /><em>akan selalu tersimpan</em></h2><span class="video-doodle" aria-hidden="true">*</span></div>
+          <div class="video-frame-wrap">
+            <div class="video-frame">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/DrXmJ41r-6U?si=RNC3ZJ_eIKNk7fwD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+            <span class="video-tape tape-top" aria-hidden="true"></span><span class="video-tape tape-bottom" aria-hidden="true"></span><span class="video-frame-note">a message, just for you</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-section">
+        <div class="closing-flower" aria-hidden="true">***</div><p class="eyebrow">sebelum kamu pergi...</p>
+        <h2>Semoga hari ini<br /><em>menyayangimu</em><br />seperti kamu menyayangi dunia.</h2>
+        <p class="closing-sign">selamat ulang tahun, Sayang</p>
+        <a href="#atas" class="back-top">Kembali ke atas <span aria-hidden="true">^</span></a><span class="closing-spark" aria-hidden="true">*</span>
+      </section>
+    </main>
+    <footer class="site-footer"><span>dibuat dengan sepenuh hati</span><span>untukmu, selalu &lt;3</span><span>2026</span></footer>
+  </body>
+</html>
